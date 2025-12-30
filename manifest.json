@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Comet Connect",
+  "version": "4.0",
+  "description": "Migrate context between ChatGPT, Claude, and Gemini.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
